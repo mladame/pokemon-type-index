@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 // function to fetch data from the apis and then make the pokemon card, offensive card, and defensive card
 
-export default function Home() {
+export default function PokeSearch() {
   // const for poke name input state
   const [pokeName, setPokeName] = useState("");
 
