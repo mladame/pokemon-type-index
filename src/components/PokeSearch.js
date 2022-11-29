@@ -2,7 +2,7 @@ import React from 'react';
 
 // function to fetch data from the apis and then make the pokemon card, offensive card, and defensive card
 
-export default function Home() {
+export default function PokeSearch() {
   return (
     <div>
       <h1>I'm the poke search </h1>
