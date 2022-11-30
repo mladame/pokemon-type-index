@@ -97,3 +97,24 @@
 .fairy-type{
 
 }
+
+/* --- footer */
+
+.footer {
+    width: 100%;
+    position: relative;
+    bottom: 0%;
+    z-index: 5;
+    margin-top: auto;
+    background-color: black;
+    color: white;
+}
+
+.custom-icon {
+    z-index: 4;
+    color: white;
+}
+
+.custom-icon:hover {
+    opacity: 0.6;
+}
