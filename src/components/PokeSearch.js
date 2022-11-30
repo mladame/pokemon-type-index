@@ -1,43 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+// import DefensiveCard from 'DefensiveCard.js';
+// import OffensiveCard from 'OffensiveCard.js';
+// import PokeCard from 'PokeCard.js';
 
 // function to fetch data from the apis and then make the pokemon card, offensive card, and defensive card
 
 export default function PokeSearch() {
   // const for poke name input state
   const [pokeName, setPokeName] = useState("");
-
-  const createPokeCard = (data) => {
-    // name , picture url, shiny url, type1, type2
-    const pokePic = data.sprites.other.home.front_default;
-    const pokePicShiny = data.sprites.other.home.front_shiny;
-    const type = data.types[0].type.name;
-    // const type2 = data.types[1].type.name
-
-    console.log("i am the createPokeCard function!");
-  };
-
-  const createOffensiveCard = (data) => {
-    // deals 2x to, deals 1x to, deals 1/2 to, deals 0 to
-
-    const deals2x = data.damage_relations.double_damage_to;
-    const dealsHalf = data.damage_relations.half_damage_to;
-    const dealsNone = data.damage_relations.no_damage_to;
-
-    // for deals normal damage, whatever type is not covered in one of these variables
-
-    console.log("i am the createOffensiveCard function!");
-  };
-
-  const createDefensiveCard = (data) => {
-    // takes 2x from, takes 1x from, takes 1/2 from, takes 0 from
-    const takes2x = data.damage_relations.double_damage_from;
-    const takesHalf = data.damage_relations.half_damage_from;
-    const takesNone = data.damage_relations.no_damage_from;
-
-    // for deals normal damage, whatever type is not covered in one of these variables
-
-    console.log("i am the createDefensiveCard function!");
-  };
+  const [pokeTypes, setPokeTypes] = useState([]);
 
   const handleInputChange = (event) => {
     // change the state
@@ -59,31 +30,37 @@ export default function PokeSearch() {
           return response.json();
         })
         .then(function (data) {
-          console.log(data);
-          createPokeCard(data);
+          // console.log(data);
 
-          const type = data.types[0].type.name;
-          // const type2 = data.types[1].type.name;
+          const types = [];
+          for (var i = 0; i < data.types.length; i++){
+            types.push(data.types[i].type.name);
+          }
+          setPokeTypes(types);
 
-          const typeURL = `https://pokeapi.co/api/v2/type/${type}/`;
+
+          // const typeURL = `https://pokeapi.co/api/v2/type/${type}/`;
 
           // second API call for the type
-          fetch(typeURL)
-            .then(function (response2) {
-              return response2.json();
-            })
-            .then(function (data2) {
-              console.log(data2);
-              createOffensiveCard(data2);
-              createDefensiveCard(data2);
-            });
+          // fetch(typeURL)
+          //   .then(function (response2) {
+          //     return response2.json();
+          //   })
+          //   .then(function (data2) {
+          //     console.log(data2);
+          //   });
         });
     } else {
       console.log("nope no name");
     }
-
-    setPokeName("");
+    // setPokeName("");
+    // setPokeTypes([]);
   };
+
+  useEffect(() => {
+    console.log(pokeName);
+    console.log(pokeTypes);
+  }, [pokeTypes])
 
   return (
     <div>
