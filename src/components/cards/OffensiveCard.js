@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function OffensiveCard(types){
     return(
-        <div className="pokeCard">
+        <div className="pokeCard col-6">
             this is for the offensive types card
         </div>
     )
