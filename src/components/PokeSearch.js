@@ -36,7 +36,7 @@ export default function PokeSearch() {
           return response.json();
         })
         .then(function (data) {
-          console.log(data);
+          // console.log(data);
 
           const types = [];
           for (var i = 0; i < data.types.length; i++) {
@@ -70,7 +70,7 @@ export default function PokeSearch() {
 
   return (
     <div className="appBody">
-      <h1>I'm the poke search </h1>
+      <h1>What's your pokemon? </h1>
       {/* form - */}
       {/* the search bar label "what's your pokemon" */}
       {/* the search bar (input) */}
@@ -92,8 +92,8 @@ export default function PokeSearch() {
         <PokeCard pokeName={pokeName} pokeTypes={pokeTypes} pokePic={pokePic} />
         <div className="col-12 col-md-8">
           <div className="row">
-            <OffensiveCard />
-            <DefensiveCard />
+            <OffensiveCard pokeTypes={pokeTypes} />
+            <DefensiveCard pokeTypes={pokeTypes} />
           </div>
         </div>
       </div>
