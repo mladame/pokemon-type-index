@@ -2,11 +2,22 @@ body {
   text-align: center !important;
 }
 
+form{
+  margin-bottom: 15px;
+}
+
 .poke-type {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  /* padding: 5px 10px; */
+  margin: 5px 10px;
   border-radius: 5px;
   border: 2px solid black;
   color: white;
-  text-shadow: rgb(105, 105, 105) 1px 0 5px;
+  font-weight: bold;
+  background-color: darkblue;
+  text-shadow: rgb(82, 82, 82) 2px 0 6px;
 }
 
 .pokeCard {
@@ -15,60 +26,82 @@ body {
   border: 5px solid black;
 }
 
+ul{
+  padding-left: 0px!important;
+}
+
 /* ---- POKEMON TYPES ----- */
 
 .fire-type {
+  background-color: rgb(240, 127, 47);
 }
 
 .water-type {
+  background-color: rgb(105, 143, 240);
 }
 
 .grass-type {
+  background-color: rgb(120, 201, 80);
 }
 
 .electric-type {
+  background-color: rgb(248, 208, 48);
 }
 
 .ground-type {
+  background-color: rgb(224, 192, 105);
 }
 
 .rock-type {
+  background-color: rgb(183, 160, 56);
 }
 
 .flying-type {
+  background-color: rgb(168, 144, 240);
 }
 
 .normal-type {
+  background-color: rgb(169, 168, 120);
 }
 
 .psychic-type {
+  background-color: rgb(248, 88, 136);
 }
 
 .dark-type {
+  background-color: rgb(111, 88, 72);
 }
 
 .ghost-type {
+  background-color: rgb(112, 87, 152);
 }
 
 .dragon-type {
+  background-color: rgb(110, 58, 246);
 }
 
 .poison-type {
+  background-color: rgb(156, 66, 156);
 }
 
 .steel-type {
+  background-color: rgb(184, 184, 208);
 }
 
 .bug-type {
+  background-color: rgb(168, 184, 33);
 }
 
 .ice-type {
+  background-color: rgb(152, 216, 216);
 }
 
 .fighting-type {
+  background-color: rgb(191, 48, 40);
 }
 
 .fairy-type {
+  background-color: rgb(237, 154, 172);
 }
 
 /* --- header */

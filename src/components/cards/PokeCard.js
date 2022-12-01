@@ -4,12 +4,12 @@ import React from "react";
 export default function PokeCard({ pokeName, pokeTypes, pokePic }) {
   return (
     <div className="pokeCard col-12 col-md-4">
-      this is for the pokemon card
+      {/* this is for the pokemon card */}
       <h3>{pokeName}</h3>
       <img src={pokePic} className="poke-img"></img>
       <ul>
         {pokeTypes.map((type) => (
-          <li>{type}</li>
+          <li className={`poke-type ${type}-type`}>{type.toUpperCase()}</li>
         ))}
       </ul>
     </div>

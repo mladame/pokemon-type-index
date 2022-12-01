@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import DefensiveCard from 'DefensiveCard.js';
-// import OffensiveCard from 'OffensiveCard.js';
-// import PokeCard from 'PokeCard.js';
 
 // ************ for testing purposes ************ //
 import PokeCard from "./cards/PokeCard";
@@ -11,7 +8,7 @@ import DefensiveCard from "./cards/DefensiveCard";
 // function to fetch data from the apis and then make the pokemon card, offensive card, and defensive card
 
 export default function PokeSearch() {
-  // const for poke name input state
+  // const for name, types, and picture input state
   const [pokeName, setPokeName] = useState("");
   const [pokeTypes, setPokeTypes] = useState([]);
   const [pokePic, setPokePic] = useState([]);
