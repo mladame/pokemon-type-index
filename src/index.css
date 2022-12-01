@@ -1,134 +1,115 @@
-body{
-    text-align: center!important;
+body {
+  text-align: center !important;
 }
 
-.poke-type{
-    border-radius: 5px;
-    border: 2px solid black;
-    color: white;
-    text-shadow: rgb(105, 105, 105) 1px 0 5px;
+.poke-type {
+  border-radius: 5px;
+  border: 2px solid black;
+  color: white;
+  text-shadow: rgb(105, 105, 105) 1px 0 5px;
 }
 
-.pokeCard{
-    height: 500px;
-    width: 350px;
-    border: 5px solid black;
+.pokeCard {
+  height: 500px;
+  width: 350px;
+  border: 5px solid black;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ---- POKEMON TYPES ----- */
 
-.fire-type{
-
+.fire-type {
 }
 
-.water-type{
-
+.water-type {
 }
 
-.grass-type{
-
+.grass-type {
 }
 
-.electric-type{
-
+.electric-type {
 }
 
-.ground-type{
-
+.ground-type {
 }
 
-.rock-type{
-
+.rock-type {
 }
 
-.flying-type{
-
+.flying-type {
 }
 
-.normal-type{
-
+.normal-type {
 }
 
-.psychic-type{
-
+.psychic-type {
 }
 
-.dark-type{
-
+.dark-type {
 }
 
-.ghost-type{
-
+.ghost-type {
 }
 
-.dragon-type{
-
+.dragon-type {
 }
 
-.poison-type{
-
+.poison-type {
 }
 
-.steel-type{
-
+.steel-type {
 }
 
-.bug-type{
-
+.bug-type {
 }
 
-.ice-type{
-
+.ice-type {
 }
 
-.fighting-type{
-
+.fighting-type {
 }
 
-.fairy-type{
-
+.fairy-type {
 }
 
 /* --- header */
 .header {
-    background-color: red;
-    padding-bottom: 7px;
+  background-color: red;
+  padding-bottom: 7px;
+}
+
+/* --- pokeSearch */
+.appBody {
+  height: 90vh;
+}
+
+/* --- pokeCard */
+.poke-img {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+/* --- offensive card / defensive card */
+li {
+  list-style: none;
 }
 
 /* --- footer */
 
 .footer {
-    width: 100%;
-    position: relative;
-    bottom: 0%;
-    z-index: 5;
-    margin-top: auto;
-    background-color: black;
-    color: white;
+  width: 100%;
+  position: relative;
+  bottom: 0%;
+  z-index: 5;
+  margin-top: auto;
+  background-color: black;
+  color: white;
 }
 
 .custom-icon {
-    z-index: 4;
-    color: white;
+  z-index: 4;
+  color: white;
 }
 
 .custom-icon:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
