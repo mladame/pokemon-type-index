@@ -69,19 +69,19 @@ export default function DefensiveCard({ pokeTypes }) {
       <h3>Takes 2x Damage from : </h3>
       <ul>
         {takes2x.map((type) => (
-          <li>{type.name}</li>
+          <li className={`poke-type ${type.name}-type`}>{type.name.toUpperCase()}</li>
         ))}
       </ul>
       <h3>Takes 1/2x Damage from : </h3>
       <ul>
         {takesHalf.map((type) => (
-          <li>{type.name}</li>
+          <li className={`poke-type ${type.name}-type`}>{type.name.toUpperCase()}</li>
         ))}
       </ul>
       <h3>Takes No Damage from : </h3>
       <ul>
         {takesNone.map((type) => (
-          <li>{type.name}</li>
+          <li className={`poke-type ${type.name}-type`}>{type.name.toUpperCase()}</li>
         ))}
       </ul>
     </div>
