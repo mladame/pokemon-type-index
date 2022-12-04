@@ -31,12 +31,15 @@ form {
 /* fix margin & important */
 .render-pokemon {
   margin: auto;
+  /* width: 400px; */
   height: fit-content;
   margin-top: 25px !important;
   margin-bottom: 25px !important;
   background-color: whitesmoke;
   border: 6px solid rgb(201, 201, 201);
   border-radius: 5px;
+  -webkit-box-shadow: 2px 4px 10px 5px #ecebeb;
+  box-shadow: 2px 4px 10px 5px #ecebeb;
 }
 
 .render-pokemon h3 {
@@ -45,9 +48,13 @@ form {
   text-transform: capitalize;
 }
 
-.pokeimg-container{
+.pokeimg-container {
   margin: auto;
   width: 300px;
+  max-width: 80%;
+  -webkit-box-shadow: 2px 4px 10px 5px #c2c2c2;
+  box-shadow: 2px 4px 10px 5px #c2c2c2;
+  border-radius: 5px;
 }
 
 .render-pokemon img {
