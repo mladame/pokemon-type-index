@@ -20,7 +20,7 @@ export default function DefensiveCard({ pokeTypes }) {
           return response.json();
         })
         .then(function (data) {
-          console.log(data);
+          // console.log(data);
 
           takes2xBucket.push(...data.damage_relations.double_damage_from);
           takesHalfBucket.push(...data.damage_relations.half_damage_from);
@@ -31,7 +31,7 @@ export default function DefensiveCard({ pokeTypes }) {
               return response2.json();
             })
             .then(function (data2) {
-              console.log(data2);
+              // console.log(data2);
 
               // ! todo : make sure that if it repeats, we do x4
               takes2xBucket.push(...data2.damage_relations.double_damage_from);
@@ -54,7 +54,7 @@ export default function DefensiveCard({ pokeTypes }) {
           return response.json();
         })
         .then(function (data) {
-          console.log(data);
+          // console.log(data);
           setTakes2x(data.damage_relations.double_damage_from);
           setTakesHalf(data.damage_relations.half_damage_from);
           setTakesNone(data.damage_relations.no_damage_from);
@@ -62,7 +62,7 @@ export default function DefensiveCard({ pokeTypes }) {
     }
   }, [pokeTypes]);
 
-  console.log(takes2x);
+  // console.log(takes2x);
   return (
     <div className="pokeCard col-6 col-md-12 col-lg-6">
       this is for the defensive types card
