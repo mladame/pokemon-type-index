@@ -28,13 +28,16 @@ form {
   border: 5px solid black;
 }
 
-/* fix margin & important */
+/* ----------------POKESEARCH-------------- */
+.search-box {
+  margin: 50px auto 40px auto;
+}
+
+
+/* ---------------POKEMON CARD------------- */
 .render-pokemon {
-  margin: auto;
-  /* width: 400px; */
+  margin: 0 auto 25px auto;
   height: fit-content;
-  margin-top: 25px !important;
-  margin-bottom: 25px !important;
   background-color: whitesmoke;
   border: 6px solid rgb(201, 201, 201);
   border-radius: 5px;
