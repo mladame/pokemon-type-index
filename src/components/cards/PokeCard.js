@@ -6,7 +6,9 @@ export default function PokeCard({ pokeName, pokeTypes, pokePic }) {
     <div className="pokeCard render-pokemon col-10 col-md-4">
       {/* this is for the pokemon card */}
       <h3>{pokeName}</h3>
-      <img src={pokePic} className="poke-img"></img>
+      <div className="pokeimg-container">
+        <img src={pokePic} className="poke-img"></img>
+      </div>
       <ul>
         {pokeTypes.map((type) => (
           <li className={`poke-type ${type}-type`}>{type.toUpperCase()}</li>

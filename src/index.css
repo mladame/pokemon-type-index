@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed&family=M+PLUS+Rounded+1c:wght@500&display=swap');
+
 body {
   text-align: center !important;
 }
 
-form{
+form {
   margin-bottom: 15px;
 }
 
@@ -26,40 +28,49 @@ form{
   border: 5px solid black;
 }
 
-.render-pokemon{
+/* fix margin & important */
+.render-pokemon {
   margin: auto;
-  height: 500px;
+  height: fit-content;
   margin-top: 25px !important;
   margin-bottom: 25px !important;
   background-color: whitesmoke;
+  border: 6px solid rgb(201, 201, 201);
+  border-radius: 5px;
 }
 
 .render-pokemon h3 {
   margin: 10px;
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+
+.pokeimg-container{
+  margin: auto;
+  width: 300px;
 }
 
 .render-pokemon img {
-  margin: 10px;
-  width: 300px;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin: auto;
   border: 6px solid rgb(218, 218, 218);
   border-radius: 5px;
-  background: rgb(232,232,232);
-  background: linear-gradient(45deg, rgba(232,232,232,1) 31%, rgba(255,255,255,1) 50%, rgba(232,232,232,1) 67%);
+  background: rgb(232, 232, 232);
+  background: linear-gradient(45deg, rgba(232, 232, 232, 1) 31%, rgba(255, 255, 255, 1) 50%, rgba(232, 232, 232, 1) 67%);
+  max-width: 100%;
+  height: auto;
 }
 
 .render-pokemon ul {
-  margin: auto;
+  margin: 40px auto;
   margin-top: 40px;
-  max-width: 250px;
+  max-width: 275px;
   background-color: rgb(216, 216, 216);
   padding: 10px;
   border-radius: 5px;
 }
 
-ul{
-  padding-left: 0px!important;
+ul {
+  padding-left: 0p !important;
 }
 
 /* ---- POKEMON TYPES ----- */
