@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from "react";
+// import FontAwesomeIcon from "@fortawesome/react-fontawesome"
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 // ************ for testing purposes ************ //
 import PokeCard from "./cards/PokeCard";
@@ -67,23 +71,26 @@ export default function PokeSearch() {
 
   return (
     <div className="appBody">
-      <h1>What's your pokemon? </h1>
+
       {/* form - */}
       {/* the search bar label "what's your pokemon" */}
       {/* the search bar (input) */}
+      <div className="search-box">
+        <h1>What's your pokemon? </h1>
+        <form className="form">
+          <input
+            value={pokeName}
+            name="pokeName"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="Pokemon Name"
+          />
+          <button type="button" onClick={handleFormSubmit}>
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </button>
+        </form>
+      </div>
 
-      <form className="form">
-        <input
-          value={pokeName}
-          name="pokeName"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="Pokemon Name"
-        />
-        <button type="button" onClick={handleFormSubmit}>
-          Submit
-        </button>
-      </form>
 
       <div className="row">
         <PokeCard pokeName={pokeName} pokeTypes={pokeTypes} pokePic={pokePic} />
