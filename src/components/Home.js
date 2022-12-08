@@ -5,7 +5,7 @@ import Footer from './Footer'
 
 export default function Home() {
   return (
-    <div>
+    <div className='site-container'>
       <Header />
       <PokeSearch />
       <Footer />
