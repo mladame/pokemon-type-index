@@ -3,7 +3,7 @@ import React from "react";
 // name , picture url, shiny url, [type1, type2]
 export default function PokeCard({ pokeName, pokeTypes, pokePic }) {
   return (
-    <div className="pokeCard render-pokemon col-9 col-lg-3 col-md-4 col-sm-8">
+    <div className="pokeCard render-pokemon col-9 col-sm-8 col-md-7 col-lg-4 col-xl-4">
       {/* this is for the pokemon card */}
       <h3>{pokeName}</h3>
       <div className="pokeimg-container">

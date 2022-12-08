@@ -99,7 +99,7 @@ export default function OffensiveCard({ pokeTypes }) {
   // console.log(deals2x);
 
   return (
-    <div className="pokeCard col-10 col-md-10 col-lg-6">
+    <div className="pokeCard my-4 col-10 col-sm-10 col-md-10 col-lg-10 col-xl-5">
       this is for the offensive types card
       <h3>Deals 2x Damage to : </h3>
       <ul>
