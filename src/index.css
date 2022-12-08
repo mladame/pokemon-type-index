@@ -28,11 +28,11 @@ form {
 }
 
 .pokeCard {
-  height: fit-content;
+  /* height: fit-content;
   min-height: 500px;
-  width: 350px;
-  border: 5px solid black;
-  margin: auto;
+  width: 350px; */
+  /* border: 5px solid black; */
+  /* margin: auto; */
 }
 
 /* ----------------POKESEARCH-------------- */
@@ -112,9 +112,6 @@ form {
   border-radius: 5px;
 }
 
-ul {
-  padding-left: 0px !important;
-}
 
 /* ---- POKEMON TYPES ----- */
 
@@ -209,10 +206,36 @@ ul {
 }
 
 /* --- offensive card / defensive card */
-.type-cards{
+.OffDef-cards {
   display: flex;
   justify-content: center;
   padding: 20px 0;
+  margin: auto;
+}
+
+.type-card {
+  height: fit-content;
+  min-height: 500px;
+  width: 350px;
+  margin: auto;
+  padding: 20px 0;
+  border: 6px solid #9b95ac;
+  border-radius: 5px;
+  background-color: #ebe7f7;
+}
+
+.type-card h3 {
+
+}
+
+.type-card ul {
+  padding-left: 0px !important;
+  background-color: #cdc7dd;
+  padding: 10px 0px;
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid #f6f4fa;
 }
 
 li {
@@ -222,6 +245,7 @@ li {
 /* --- footer */
 
 .footer {
+  margin: auto;
   position: absolute;
   bottom: 0;
   width: 100%;

@@ -99,21 +99,21 @@ export default function OffensiveCard({ pokeTypes }) {
   // console.log(deals2x);
 
   return (
-    <div className="pokeCard my-4 col-10 col-sm-10 col-md-10 col-lg-10 col-xl-5">
+    <div className="pokeCard type-card my-4 col-9 col-sm-8 col-md-8 col-lg-9 col-xl-5">
       this is for the offensive types card
-      <h3>Deals 2x Damage to : </h3>
+      <h3>Deals 2x Damage to: </h3>
       <ul>
         {deals2x.map((type) => (
           <li className={`poke-type ${type.name}-type`}>{type.name.toUpperCase()}</li>
         ))}
       </ul>
-      <h3>Deals 1/2x Damage to : </h3>
+      <h3>Deals 1/2x Damage to: </h3>
       <ul>
         {dealsHalf.map((type) => (
           <li className={`poke-type ${type.name}-type`}>{type.name.toUpperCase()}</li>
         ))}
       </ul>
-      <h3>Deals No Damage to : </h3>
+      <h3>Deals No Damage to: </h3>
       <ul>
         {dealsNone.map((type) => (
           <li className={`poke-type ${type.name}-type`}>{type.name.toUpperCase()}</li>
