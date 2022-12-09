@@ -52,32 +52,35 @@ form {
   margin: 0px;
   font-size: 25px;
   padding: 4px;
-  border: 2px solid #736598;
+  border: 2px solid #9781d6;
   border-bottom: 0px;
   border-radius: 3px 3px 0 0;
-  background-color: #f46b6b;
+  background-color: rgba(245,220,240,1);
   font-weight: 600;
+  box-shadow: 1px 1px 8px 5px rgb(235, 195, 227) inset;
 }
 
 .form {
-  border: 2px solid #736598;
+  border: 2px solid #9781d6;
   padding: 15px;
-  background-color: #f6fdff;
+  background-color: #e0f4fa;
 }
 
 .form input {
   width: 325px;
   padding: 3px 2px;
-  border: 2px solid #e9e5fc;
+  border: 2px solid #d6cdff;
+  box-shadow: 2px 2px 4px 2px #c7e0e7;
 }
 
 .form button {
   width: 34px;
   height: 34px;
   color: #736598;
-  background-color: #e9e5fc;
+  background-color: #d6cdff;
   border: none;
   border-radius: 0 3px 3px 0;
+  box-shadow: 1px 1px 4px 2px #c7e0e7;
 }
 
 /* ---------------POKEMON CARD------------- */
@@ -251,6 +254,8 @@ form {
   /* height: fit-content; */
   /* border: 5px solid black; */
   background-color: rgb(232, 241, 252);
+  border: 3px solid rgba(255, 0, 0, 0);
+
 }
 
 /* --- pokeCard */
