@@ -79,9 +79,9 @@ form {
   margin: 20px auto;
   height: fit-content;
   background-color: rgb(243, 243, 243);
-  border: 6px solid rgb(228, 228, 228);
+  border: 6px solid rgb(214, 214, 214);
   border-radius: 5px;
-  -webkit-box-shadow: 2px 4px 10px 5px #fffbfb;
+  -webkit-box-shadow: 2px 4px 10px 5px #f1f1f1;
   box-shadow: 2px 4px 10px 5px #ffffffbe;
   max-width: 500px !important;
 }
@@ -93,6 +93,7 @@ form {
   font-family: var(--bodyFont);
   font-weight: 900;
   font-size: 30px;
+  text-shadow: #636363 2px 2px 7px;
 }
 
 .pokeimg-container {
@@ -119,7 +120,7 @@ form {
   margin-top: 40px;
   max-width: 275px;
   background-color: rgb(226, 226, 226);
-  padding: 10px;
+  padding: 15px 10px;
   border-radius: 5px;
   border: 2px solid rgb(226, 226, 226);
   box-shadow: 3px 3px 13px 5px rgb(185, 185, 185) inset;
@@ -130,75 +131,92 @@ form {
 
 .fire-type {
   background-color: rgb(240, 127, 47);
+  box-shadow: 1px 1px 8px 5px rgb(248, 152, 84) inset;
 }
 
 .water-type {
   background-color: rgb(105, 143, 240);
-  box-shadow: 1px 1px 8px 5px rgb(141, 171, 248) inset;
+  box-shadow: 1px 1px 8px 4px rgb(137, 169, 252) inset;
 }
 
 .grass-type {
   background-color: rgb(120, 201, 80);
+  box-shadow: 1px 1px 8px 5px rgb(131, 219, 87) inset;
 }
 
 .electric-type {
   background-color: rgb(248, 208, 48);
+  box-shadow: 1px 1px 4px 5px rgb(255, 220, 81) inset;
 }
 
 .ground-type {
   background-color: rgb(224, 192, 105);
+  box-shadow: 1px 1px 4px 3px rgb(226, 203, 139) inset;
 }
 
 .rock-type {
   background-color: rgb(183, 160, 56);
+  box-shadow: 1px 1px 8px 5px rgb(199, 175, 68) inset;
 }
 
 .flying-type {
   background-color: rgb(168, 144, 240);
+  box-shadow: 1px 1px 8px 4px rgb(189, 169, 250) inset;
 }
 
 .normal-type {
   background-color: rgb(169, 168, 120);
+  box-shadow: 1px 1px 5px 5px rgb(185, 185, 136) inset;
 }
 
 .psychic-type {
   background-color: rgb(248, 88, 136);
+  box-shadow: 1px 1px 8px 4px rgb(252, 121, 160) inset;
 }
 
 .dark-type {
   background-color: rgb(111, 88, 72);
+  box-shadow: 1px 1px 8px 4px rgb(143, 113, 93) inset;
 }
 
 .ghost-type {
   background-color: rgb(112, 87, 152);
+  box-shadow: 1px 1px 8px 4px rgb(139, 111, 184) inset;
 }
 
 .dragon-type {
   background-color: rgb(110, 58, 246);
+  box-shadow: 1px 1px 6px 4px rgb(143, 99, 252) inset;
 }
 
 .poison-type {
   background-color: rgb(156, 66, 156);
+  box-shadow: 1px 1px 6px 4px rgb(180, 92, 180) inset;
 }
 
 .steel-type {
   background-color: rgb(184, 184, 208);
+  box-shadow: 1px 1px 8px 5px rgb(204, 204, 228) inset;
 }
 
 .bug-type {
   background-color: rgb(168, 184, 33);
+  box-shadow: 1px 1px 6px 5px rgb(185, 201, 46) inset;
 }
 
 .ice-type {
   background-color: rgb(152, 216, 216);
+  box-shadow: 1px 1px 6px 5px rgb(173, 235, 235) inset;
 }
 
 .fighting-type {
   background-color: rgb(191, 48, 40);
+  box-shadow: 1px 1px 4px 5px rgb(219, 70, 63) inset;
 }
 
 .fairy-type {
   background-color: rgb(237, 154, 172);
+  box-shadow: 1px 1px 8px 5px rgb(248, 174, 190) inset;
 }
 
 /* --- header */
@@ -246,7 +264,8 @@ form {
   padding: 20px 0;
   border: 6px solid #9b95ac;
   border-radius: 5px;
-  background-color: #ebe7f7;
+  background-color: #ebe7f7af;
+  box-shadow: 1px 1px 20px 10px #d6d3e2 inset;
 }
 
 .type-card h3 {
@@ -254,17 +273,19 @@ form {
   font-weight: 500;
   padding: 3px;
   max-width: 80%;
-  margin: auto;
+  margin: 6px auto;
+  text-shadow: #5f5283 1px 1px 3px;
+  color: #625a7a
 }
 
 .type-card ul {
   padding-left: 0px !important;
   background-color: #cdc7dd;
-  padding: 10px 0px;
+  padding: 15px 0px;
   width: 80%;
   margin: auto;
   border-radius: 5px;
-  border: 1px solid #f6f4fa;
+  border: 1px solid #f6f4fae7;
   box-shadow: 3px 3px 13px 5px rgb(178, 170, 192) inset;
 }
 
