@@ -94,7 +94,7 @@ export default function PokeSearch() {
 
       <div className="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 row-cols-xl-2">
         <PokeCard pokeName={pokeName} pokeTypes={pokeTypes} pokePic={pokePic} />
-        <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7">
+        <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-8">
           <div className="OffDef-cards row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 row-cols-xl-1">
             <OffensiveCard pokeTypes={pokeTypes} />
             <DefensiveCard pokeTypes={pokeTypes} />
