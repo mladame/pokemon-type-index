@@ -6,6 +6,7 @@
 
 body {
   text-align: center !important;
+  /* min-width: 100%; */
   /* height: 100vh; */
 }
 
@@ -67,23 +68,32 @@ form {
 .form input {
   width: 325px;
   padding: 3px 2px;
+  border: 2px solid #e9e5fc;
 }
 
 .form button {
   width: 34px;
   height: 34px;
+  color: #736598;
+  background-color: #e9e5fc;
+  border: none;
+  border-radius: 0 3px 3px 0;
 }
 
 /* ---------------POKEMON CARD------------- */
 .render-pokemon {
   margin: 20px auto;
   height: fit-content;
-  background-color: rgb(243, 243, 243);
-  border: 6px solid rgb(214, 214, 214);
+  /* background-color: rgb(228, 228, 228); */
+  background: rgb(245,220,240);
+  background: linear-gradient(135deg, rgba(245,220,240,1) 20%, rgba(213,193,255,1) 50%, rgba(195,215,233,1) 78%);
+  border: 6px solid rgb(226, 226, 226);
   border-radius: 5px;
-  -webkit-box-shadow: 2px 4px 10px 5px #f1f1f1;
-  box-shadow: 2px 4px 10px 5px #ffffffbe;
+  -webkit-box-shadow: 2px 4px 15px 5px #9b9b9b;
+  box-shadow: 2px 4px 8px 5px #ccc2ff, 1px 1px 15px 7px rgba(180, 167, 216, 0.808) inset;
   max-width: 500px !important;
+  /* outline: rgb(247, 247, 247) 10px solid; */
+  /* outline-offset: 4px; */
 }
 
 .render-pokemon h3 {
@@ -93,7 +103,8 @@ form {
   font-family: var(--bodyFont);
   font-weight: 900;
   font-size: 30px;
-  text-shadow: #636363 2px 2px 7px;
+  color: whitesmoke;
+  text-shadow: rgb(77, 72, 95) 3px 3px 20px;
 }
 
 .pokeimg-container {
@@ -101,13 +112,13 @@ form {
   width: 300px;
   max-width: 80%;
   -webkit-box-shadow: 2px 4px 10px 5px #c2c2c2;
-  box-shadow: 2px 4px 10px 5px #c2c2c2;
+  box-shadow: 2px 4px 10px 5px rgba(157, 146, 189, 0.808);
   border-radius: 5px;
 }
 
 .render-pokemon img {
   margin: auto;
-  border: 6px solid rgb(218, 218, 218);
+  border: 6px solid rgb(214, 214, 214);
   border-radius: 5px;
   background: rgb(232, 232, 232);
   background: linear-gradient(45deg, rgba(232, 232, 232, 1) 31%, rgba(255, 255, 255, 1) 50%, rgba(232, 232, 232, 1) 67%);
@@ -262,10 +273,10 @@ form {
   width: 350px;
   margin: auto;
   padding: 20px 0;
-  border: 6px solid #9b95ac;
+  border: 6px solid #a497c7;
   border-radius: 5px;
   background-color: #ebe7f7af;
-  box-shadow: 1px 1px 20px 10px #d6d3e2 inset;
+  box-shadow: 1px 1px 20px 7px #d3cdec inset;
 }
 
 .type-card h3 {
@@ -280,13 +291,13 @@ form {
 
 .type-card ul {
   padding-left: 0px !important;
-  background-color: #cdc7dd;
+  background-color: #d1c9e7;
   padding: 15px 0px;
   width: 80%;
   margin: auto;
   border-radius: 5px;
   border: 1px solid #f6f4fae7;
-  box-shadow: 3px 3px 13px 5px rgb(178, 170, 192) inset;
+  box-shadow: 3px 3px 13px 5px rgb(175, 161, 201) inset;
 }
 
 li {
