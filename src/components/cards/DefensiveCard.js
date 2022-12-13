@@ -118,7 +118,7 @@ export default function DefensiveCard({ pokeTypes }) {
 
   // console.log(takes2x);
   return (
-    <div className="pokeCard col-6 col-md-12 col-lg-6">
+    <div className="pokeCard type-card my-4 col-9 col-sm-8 col-md-8 col-lg-9 col-xl-5">
       this is for the defensive types card
       <h3>Takes 4x Damage from : </h3>
       <ul>
