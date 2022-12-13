@@ -44,7 +44,8 @@ form {
 /* ----------------POKESEARCH-------------- */
 .search-box {
   margin: 50px auto 40px auto;
-  width: 400px;
+  width: 70%;
+  max-width: 900px;
   font-family: var(--bodyFont);
 }
 
@@ -55,22 +56,20 @@ form {
   border: 2px solid #9781d6;
   border-bottom: 0px;
   border-radius: 3px 3px 0 0;
-  background-color: rgba(245,220,240,1);
+  background-color: rgba(245, 220, 240, 1);
   font-weight: 600;
-  box-shadow: 1px 1px 8px 5px rgb(235, 195, 227) inset;
 }
 
 .form {
   border: 2px solid #9781d6;
   padding: 15px;
-  background-color: #e0f4fa;
+  background-color: #f5f9fc;
 }
 
 .form input {
-  width: 325px;
+  width: 80%;
   padding: 3px 2px;
   border: 2px solid #d6cdff;
-  box-shadow: 2px 2px 4px 2px #c7e0e7;
 }
 
 .form button {
@@ -80,23 +79,19 @@ form {
   background-color: #d6cdff;
   border: none;
   border-radius: 0 3px 3px 0;
-  box-shadow: 1px 1px 4px 2px #c7e0e7;
 }
 
 /* ---------------POKEMON CARD------------- */
 .render-pokemon {
   margin: 20px auto;
   height: fit-content;
-  /* background-color: rgb(228, 228, 228); */
-  background: rgb(245,220,240);
-  background: linear-gradient(135deg, rgba(245,220,240,1) 20%, rgba(213,193,255,1) 50%, rgba(195,215,233,1) 78%);
-  border: 6px solid rgb(226, 226, 226);
+  background: rgb(245, 220, 240);
+  background: linear-gradient(135deg, rgba(245, 220, 240, 1) 20%, rgba(213, 193, 255, 1) 50%, rgb(209, 229, 247) 78%);
+  border: 4px solid rgb(232, 234, 255);
   border-radius: 5px;
-  -webkit-box-shadow: 2px 4px 15px 5px #9b9b9b;
-  box-shadow: 2px 4px 8px 5px #ccc2ff, 1px 1px 15px 7px rgba(180, 167, 216, 0.808) inset;
+  -webkit-box-shadow: 2px 4px 15px 5px #a7a7a7;
+  box-shadow: 2px 4px 8px 5px #c2c6ff, 1px 1px 15px 7px rgba(199, 202, 245, 0.76) inset;
   max-width: 500px !important;
-  /* outline: rgb(247, 247, 247) 10px solid; */
-  /* outline-offset: 4px; */
 }
 
 .render-pokemon h3 {
@@ -114,14 +109,14 @@ form {
   margin: auto;
   width: 300px;
   max-width: 80%;
-  -webkit-box-shadow: 2px 4px 10px 5px #c2c2c2;
-  box-shadow: 2px 4px 10px 5px rgba(157, 146, 189, 0.808);
+  -webkit-box-shadow: 2px 4px 10px 5px #e4e4e4;
+  box-shadow: 1px 1px 8px 5px rgb(197, 182, 245);
   border-radius: 5px;
 }
 
 .render-pokemon img {
   margin: auto;
-  border: 6px solid rgb(214, 214, 214);
+  border: 6px solid rgb(212, 215, 226);
   border-radius: 5px;
   background: rgb(232, 232, 232);
   background: linear-gradient(45deg, rgba(232, 232, 232, 1) 31%, rgba(255, 255, 255, 1) 50%, rgba(232, 232, 232, 1) 67%);
@@ -133,11 +128,11 @@ form {
   margin: 40px auto;
   margin-top: 40px;
   max-width: 275px;
-  background-color: rgb(226, 226, 226);
+  background-color: rgb(228, 235, 248);
   padding: 15px 10px;
   border-radius: 5px;
-  border: 2px solid rgb(226, 226, 226);
-  box-shadow: 3px 3px 13px 5px rgb(185, 185, 185) inset;
+  border: 2px solid rgb(216, 218, 230);
+  box-shadow: 3px 3px 13px 5px rgb(202, 211, 233) inset;
 }
 
 
@@ -175,7 +170,7 @@ form {
 
 .flying-type {
   background-color: rgb(168, 144, 240);
-  box-shadow: 1px 1px 8px 4px rgb(189, 169, 250) inset;
+  box-shadow: 1px 1px 8px 4px rgb(187, 167, 247) inset;
 }
 
 .normal-type {
@@ -200,7 +195,7 @@ form {
 
 .dragon-type {
   background-color: rgb(110, 58, 246);
-  box-shadow: 1px 1px 6px 4px rgb(143, 99, 252) inset;
+  box-shadow: 1px 1px 6px 4px rgb(135, 94, 238) inset;
 }
 
 .poison-type {
@@ -235,27 +230,29 @@ form {
 
 /* --- header */
 .header {
-  background: rgb(209,225,246);
-  background: linear-gradient(45deg, rgba(209,225,246,1) 20%, rgba(235,231,247,1) 70%);  padding-bottom: 7px;
-  /* height: 75px; */
+  background-color: rgb(213, 196, 248);
+  /* border-bottom: 2px solid rgb(255, 255, 255); */
+  border-bottom: 4px solid rgb(232, 234, 255);
+  padding-bottom: 7px;
 
 }
 
 .display-4 {
-  color: #736598;
+  color: #fff;
+  text-shadow: 0 0 7px #736598;
+  /* text-shadow: 3px 3px 20px rgb(77, 72, 95); */
 }
 
 /* --- pokeSearch */
 .appBody {
-  /* height: 100vh; */
   min-height: 100%;
   padding-bottom: 2.5rem;
-  /* margin-bottom: 2.5rem; */
-  /* height: fit-content; */
-  /* border: 5px solid black; */
-  background-color: rgb(232, 241, 252);
   border: 3px solid rgba(255, 0, 0, 0);
-
+  background-color: #e4f4ff;
+  opacity: 1;
+  background-image: linear-gradient(#ffffff48 2px, transparent 2px),
+    linear-gradient(to right, #ffffff48 2px, #e4f4ff 2px);
+  background-size: 70px 70px;
 }
 
 /* --- pokeCard */
@@ -278,31 +275,31 @@ form {
   width: 350px;
   margin: auto;
   padding: 20px 0;
-  border: 6px solid #a497c7;
+  border: 4px solid #ada0d3;
   border-radius: 5px;
-  background-color: #ebe7f7af;
-  box-shadow: 1px 1px 20px 7px #d3cdec inset;
+  /* background-color: #f5f2ffaf; */
+  /* background-color: rgba(236, 236, 236, 0.7); */
+  background-color: rgb(233, 238, 247);
+  /* box-shadow: 1px 1px 20px 7px #ded9eede inset; */
+  box-shadow: 3px 3px 8px 3px rgb(202, 211, 233) inset;
 }
 
 .type-card h3 {
-  font-family: var(--bodyFont);
-  font-weight: 500;
   padding: 3px;
   max-width: 80%;
   margin: 6px auto;
-  text-shadow: #5f5283 1px 1px 3px;
-  color: #625a7a
+  color: #695e8b
 }
 
 .type-card ul {
   padding-left: 0px !important;
-  background-color: #d1c9e7;
+  background-color: #dfd8fd;
   padding: 15px 0px;
   width: 80%;
   margin: auto;
   border-radius: 5px;
-  border: 1px solid #f6f4fae7;
-  box-shadow: 3px 3px 13px 5px rgb(175, 161, 201) inset;
+  border: 1px solid #e0d9ff;
+  box-shadow: 3px 3px 13px 5px rgb(203, 188, 231) inset;
 }
 
 li {
