@@ -65,8 +65,8 @@ export default function PokeSearch() {
   };
 
   useEffect(() => {
-    console.log(pokeName);
-    console.log(pokeTypes);
+    // console.log(pokeName);
+    // console.log(pokeTypes);
   }, [pokeTypes]);
 
   return (
