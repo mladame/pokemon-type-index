@@ -20,20 +20,20 @@ export default function DefensiveCard({ pokeTypes }) {
       // ! hashmaps for 2x, half
       let doubleHashmap = new Map();
       let halfHashmap = new Map();
+      let noDamageHashmap = new Map();
+
       let noDamageArray = [];
-      
       let doubleArray = [];
       let halfArray = [];
       let times4Array = []; 
       let quarterArray = [];
       
-
       fetch(typeURL)
         .then(function (response) {
           return response.json();
         })
         .then(function (data) {
-          console.log(data)
+          // console.log(data)
           for(let i = 0; i < data.damage_relations.double_damage_from.length; i++) {
             doubleHashmap.set(data.damage_relations.double_damage_from[i].name, 1)
           }
@@ -43,7 +43,7 @@ export default function DefensiveCard({ pokeTypes }) {
           }
 
           for(let i = 0; i < data.damage_relations.no_damage_from.length; i++) {
-            noDamageArray.push(data.damage_relations.no_damage_from[i].name)
+            noDamageHashmap.set(data.damage_relations.no_damage_from[i].name, 1)
           }
   
           fetch(typeURL2)
@@ -51,7 +51,14 @@ export default function DefensiveCard({ pokeTypes }) {
               return response2.json();
             })
             .then(function (data2) {
-              console.log(data2)
+              // console.log(data2)
+
+              // let noDamageArray = [];
+              // let doubleArray = [];
+              // let halfArray = [];
+              // let times4Array = []; 
+              // let quarterArray = [];
+
               for(let i = 0; i < data2.damage_relations.double_damage_from.length; i++) {
                 if (doubleHashmap.has(data2.damage_relations.double_damage_from[i].name)) {
                   doubleHashmap.set(data2.damage_relations.double_damage_from[i].name, 2)
@@ -69,25 +76,47 @@ export default function DefensiveCard({ pokeTypes }) {
               }
 
               for(let i = 0; i < data2.damage_relations.no_damage_from.length; i++) {
-                noDamageArray.push(data2.damage_relations.no_damage_from[i].name)
+                noDamageHashmap.set(data2.damage_relations.no_damage_from[i].name, 1)
               }
 
               //! this is for the takes no damage
-              // todo set state later
-              console.log(noDamageArray)      
+              for (let [key, value] of noDamageHashmap) {
+                noDamageArray.push(key);
+              }
 
               //! this is for the takes 1/2x damage and takes 1/4x damage
               for (let [key, value] of halfHashmap) {
-
+                if (value === 2){
+                  quarterArray.push(key)
+                } else {
+                  halfArray.push(key)
+                }
               }
 
               //! this is for the takes 2x damage and takes 4x damage
               for (let [key, value] of doubleHashmap) {
-                
+                if (value === 2){
+                  times4Array.push(key)
+                } else {
+                  doubleArray.push(key)
+                }
               }
+
+              //! setting the states
+              setTakes2x(doubleArray);
+              setTakesHalf(halfArray);
+              setTakesNone(noDamageArray);
+              setTakes4x(times4Array);
+              setTakesQuarter(quarterArray);
+
+              console.log(doubleArray);
+              console.log(halfArray);
+              console.log(noDamageArray);
+              console.log(times4Array);
+              console.log(quarterArray);
+
             });
       });
-
     } else {
       // if the pokemon only has one type it'll fetch once
       const typeURL = `https://pokeapi.co/api/v2/type/${pokeTypes}/`;
@@ -97,10 +126,26 @@ export default function DefensiveCard({ pokeTypes }) {
           return response.json();
         })
         .then(function (data) {
-          // console.log(data);
-          setTakes2x(data.damage_relations.double_damage_from); // hashmap
-          setTakesHalf(data.damage_relations.half_damage_from); // hashmap
-          setTakesNone(data.damage_relations.no_damage_from); // array 
+          console.log(data);
+          let noDamageArray = [];
+          let doubleArray = [];
+          let halfArray = [];
+
+          for(let i = 0; i < data.damage_relations.double_damage_from.length; i++) {
+            doubleArray.push(data.damage_relations.double_damage_from[i].name)
+          }
+
+          for(let i = 0; i < data.damage_relations.half_damage_from.length; i++) {
+            halfArray.push(data.damage_relations.half_damage_from[i].name)
+          }
+
+          for(let i = 0; i < data.damage_relations.no_damage_from.length; i++) {
+            noDamageArray.push(data.damage_relations.no_damage_from[i].name)
+          }
+
+          setTakes2x(doubleArray); // hashmap
+          setTakesHalf(halfArray); // hashmap
+          setTakesNone(noDamageArray); // array 
         });
     }
   }, [pokeTypes]);
@@ -111,43 +156,43 @@ export default function DefensiveCard({ pokeTypes }) {
       <h3>Takes 4x Damage from : </h3>
       <ul>
         {takes4x.map((type) => (
-          <li className={`poke-type ${type.name}-type`}>
-            {type.name.toUpperCase()}
+          <li className={`poke-type ${type}-type`}>
+            {type.toUpperCase()}
           </li>
         ))}
       </ul>
       <h3>Takes 2x Damage from : </h3>
       <ul>
         {takes2x.map((type) => (
-          <li className={`poke-type ${type.name}-type`}>
-            {type.name.toUpperCase()}
+          <li className={`poke-type ${type}-type`}>
+            {type.toUpperCase()}
           </li>
         ))}
       </ul>
       <h3>Takes 1/2x Damage from : </h3>
       <ul>
         {takesHalf.map((type) => (
-          <li className={`poke-type ${type.name}-type`}>
-            {type.name.toUpperCase()}
+          <li className={`poke-type ${type}-type`}>
+            {type.toUpperCase()}
           </li>
         ))}
       </ul>
       <h3>Takes 1/4x Damage from : </h3>
       <ul>
         {takesQuarter.map((type) => (
-          <li className={`poke-type ${type.name}-type`}>
-            {type.name.toUpperCase()}
+          <li className={`poke-type ${type}-type`}>
+            {type.toUpperCase()}
           </li>
         ))}
       </ul>
       <h3>Takes No Damage from : </h3>
       <ul>
         {takesNone.map((type) => (
-          <li className={`poke-type ${type.name}-type`}>
-            {type.name.toUpperCase()}
+          <li className={`poke-type ${type}-type`}>
+            {type.toUpperCase()}
           </li>
         ))}
-      </ul>
+      </ul> 
     </div>
   );
 }
