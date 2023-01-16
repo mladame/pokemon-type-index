@@ -111,10 +111,10 @@ export default function DefensiveCard({ pokeTypes }) {
               setTakesQuarter(quarterArray);
 
               // console.log(doubleArray);
-              console.log(halfHashmap);
+              // console.log(halfHashmap);
               // console.log(noDamageArray);
               // console.log(times4Array);
-              console.log(quarterArray);
+              // console.log(quarterArray);
 
             });
       });
