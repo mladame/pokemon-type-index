@@ -68,7 +68,7 @@ export default function DefensiveCard({ pokeTypes }) {
               }
 
               for(let i = 0; i < data2.damage_relations.half_damage_from.length; i++) {
-                if (doubleHashmap.has(data2.damage_relations.half_damage_from[i].name)) {
+                if (halfHashmap.has(data2.damage_relations.half_damage_from[i].name)) {
                   halfHashmap.set(data2.damage_relations.half_damage_from[i].name, 2)
                 } else {
                   halfHashmap.set(data2.damage_relations.half_damage_from[i].name, 1)
@@ -86,19 +86,20 @@ export default function DefensiveCard({ pokeTypes }) {
 
               //! this is for the takes 1/2x damage and takes 1/4x damage
               for (let [key, value] of halfHashmap) {
-                if (value === 2){
-                  quarterArray.push(key)
-                } else {
+                if (value === 1 && !noDamageHashmap.has(key) && !doubleHashmap.has(key)){
                   halfArray.push(key)
+                } else if (value === 2) {
+                  
+                  quarterArray.push(key)
                 }
               }
 
               //! this is for the takes 2x damage and takes 4x damage
               for (let [key, value] of doubleHashmap) {
-                if (value === 2){
-                  times4Array.push(key)
-                } else {
+                if (value === 1 && !noDamageHashmap.has(key) && !halfHashmap.has(key)){
                   doubleArray.push(key)
+                } else if (value === 2) {
+                  times4Array.push(key)
                 }
               }
 
@@ -109,10 +110,10 @@ export default function DefensiveCard({ pokeTypes }) {
               setTakes4x(times4Array);
               setTakesQuarter(quarterArray);
 
-              console.log(doubleArray);
-              console.log(halfArray);
-              console.log(noDamageArray);
-              console.log(times4Array);
+              // console.log(doubleArray);
+              console.log(halfHashmap);
+              // console.log(noDamageArray);
+              // console.log(times4Array);
               console.log(quarterArray);
 
             });
@@ -143,9 +144,9 @@ export default function DefensiveCard({ pokeTypes }) {
             noDamageArray.push(data.damage_relations.no_damage_from[i].name)
           }
 
-          setTakes2x(doubleArray); // hashmap
-          setTakesHalf(halfArray); // hashmap
-          setTakesNone(noDamageArray); // array 
+          setTakes2x(doubleArray);
+          setTakesHalf(halfArray); 
+          setTakesNone(noDamageArray); 
         });
     }
   }, [pokeTypes]);
