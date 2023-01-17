@@ -17,6 +17,7 @@ export default function PokeSearch() {
   const [pokeTypes, setPokeTypes] = useState([]);
   const [pokePic, setPokePic] = useState([]);
   const [shinyPokePic, setShinyPokePic] = useState([]);
+  const [searched, setSearched] = useState(false);
 
   const handleInputChange = (event) => {
     // change the state
@@ -27,6 +28,7 @@ export default function PokeSearch() {
   };
 
   const handleFormSubmit = (event) => {
+    setSearched(true)
     const name = pokeName.toLowerCase();
 
     const url = `https://pokeapi.co/api/v2/pokemon/${name}/`;
@@ -75,8 +77,6 @@ export default function PokeSearch() {
     <div className="appBody">
 
       {/* form - */}
-      {/* the search bar label "what's your pokemon" */}
-      {/* the search bar (input) */}
       <div className="search-box">
         <h1>What's your pokemon? </h1>
         <form className="form">
@@ -93,7 +93,7 @@ export default function PokeSearch() {
         </form>
       </div>
 
-
+      {searched === true ? (
       <div className="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 row-cols-xl-2 w-100">
         <PokeCard pokeName={pokeName} pokeTypes={pokeTypes} pokePic={pokePic} shinyPokePic={shinyPokePic} />
         <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-8">
@@ -103,6 +103,11 @@ export default function PokeSearch() {
           </div>
         </div>
       </div>
+      ) : (
+      <div>
+
+      </div>
+      )}
     </div>
   );
 }

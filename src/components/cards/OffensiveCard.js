@@ -127,7 +127,6 @@ export default function OffensiveCard({ pokeTypes }) {
 
   return (
     <div className="pokeCard type-card my-4 col-9 col-sm-8 col-md-8 col-lg-9 col-xl-5">
-      this is for the offensive types card
       <h3>Deals 2x Damage to: </h3>
       <ul>
         {deals2x.map((type) => (
