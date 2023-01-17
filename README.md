@@ -2,7 +2,7 @@
 
 ## Link to Site 
 
-> [Pokemon Type Stats]()
+> [Pokemon Type Stats](https://pokemon-stats.herokuapp.com/)
 ## Description
 ---
 
@@ -46,14 +46,18 @@ GIVEN a pokemon type web application
 WHEN I open the website
 THEN I am prompted to look up a pokemon
 WHEN I search a Pokemon
-THEN three cards appear. The first with the Pokemon's name, sprite, toggle to see its shiny sprite, and its type/types. The second shows what types it is offensive against. The last show what it is defensive against. 
+THEN three cards appear. 
+WHEN I look at the first card
+THEN I see the Pokemon's name, sprite, toggle to see its shiny sprite, and its type/types. 
+WHEN I look at the second and third cards
+THEN it shows what types it is offensive and defensive against. 
 
 ```
 
 ## Preview
 ---
-![alt-text](../pokemon-type-index/img/wooper.png)
-![alt-text](../pokemon-type-index/img/shinywooper.png)
+![alt-text](/img/wooper.png)
+![alt-text](/img/shinywooper.png)
 
 ## Contributors
 ---
@@ -76,7 +80,7 @@ THEN three cards appear. The first with the Pokemon's name, sprite, toggle to se
 > https://github.com/mladame/pokemon-type-index
 ## Deployed URL
 ---
-> 
+> https://pokemon-stats.herokuapp.com/
 ## License
 ---
 
