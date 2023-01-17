@@ -16,6 +16,7 @@ export default function PokeSearch() {
   const [pokeName, setPokeName] = useState("");
   const [pokeTypes, setPokeTypes] = useState([]);
   const [pokePic, setPokePic] = useState([]);
+  const [shinyPokePic, setShinyPokePic] = useState([]);
 
   const handleInputChange = (event) => {
     // change the state
@@ -37,7 +38,7 @@ export default function PokeSearch() {
           return response.json();
         })
         .then(function (data) {
-          // console.log(data);
+          console.log(data);
 
           const types = [];
           for (var i = 0; i < data.types.length; i++) {
@@ -45,6 +46,7 @@ export default function PokeSearch() {
           }
           setPokeTypes(types);
           setPokePic(data.sprites.other.home.front_default);
+          setShinyPokePic(data.sprites.other.home.front_shiny)
 
           // const typeURL = `https://pokeapi.co/api/v2/type/${type}/`;
 
@@ -92,8 +94,8 @@ export default function PokeSearch() {
       </div>
 
 
-      <div className="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 row-cols-xl-2">
-        <PokeCard pokeName={pokeName} pokeTypes={pokeTypes} pokePic={pokePic} />
+      <div className="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 row-cols-xl-2 w-100">
+        <PokeCard pokeName={pokeName} pokeTypes={pokeTypes} pokePic={pokePic} shinyPokePic={shinyPokePic} />
         <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-8">
           <div className="OffDef-cards row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 row-cols-xl-1">
             <OffensiveCard pokeTypes={pokeTypes} />
