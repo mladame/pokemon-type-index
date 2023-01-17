@@ -6,6 +6,7 @@
 
 body {
   text-align: center !important;
+  background-color: #e4f4ff !important;
   /* min-width: 100%; */
   /* height: 100vh; */
 }
@@ -135,6 +136,60 @@ form {
   box-shadow: 3px 3px 13px 5px rgb(202, 211, 233) inset;
 }
 
+/* ---- POKEMON Shiny Toggle ----- */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #f5dcf0;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #f5dcf0;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
 
 /* ---- POKEMON TYPES ----- */
 
@@ -243,6 +298,10 @@ form {
   /* text-shadow: 3px 3px 20px rgb(77, 72, 95); */
 }
 
+.custom-h1:hover {
+  cursor: pointer;
+}
+
 /* --- pokeSearch */
 .appBody {
   min-height: 100%;
@@ -309,20 +368,20 @@ li {
 /* --- footer */
 
 .footer {
-  /* margin: auto; */
+  padding-top: 8px;
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 2.5rem;
   /* z-index: 5; */
   /* margin-top: 30px; */
-  background-color: black;
-  color: white;
+  background-color: #d5c4f8;
+  color: black;
 }
 
 .custom-icon {
   z-index: 4;
-  color: white;
+  color: black;
 }
 
 .custom-icon:hover {
