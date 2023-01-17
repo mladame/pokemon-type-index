@@ -51,7 +51,9 @@ THEN three cards appear. The first with the Pokemon's name, sprite, toggle to se
 ```
 
 ## Preview
-
+---
+![home page](/pokemon-type-index/src/img/wooper.png)
+![home page](/pokemon-type-index/src/img/shinywooper.png)
 
 ## Contributors
 ---
