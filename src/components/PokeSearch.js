@@ -28,15 +28,9 @@ export default function PokeSearch() {
   };
 
   const handleFormSubmit = (event) => {
-    setSearched(true)
     const name = pokeName.toLowerCase();
-    const url = `https://pokeapi.co/api/v2/pokemon/${name}/`;
-    const pokeError = document.getElementById("poke-name-error")
 
-    if (document.getElementById("shiny-toggle")) {
-      const shinyCheck = document.getElementById("shiny-toggle");
-      shinyCheck.checked = false;
-    }
+    const url = `https://pokeapi.co/api/v2/pokemon/${name}/`;
 
     if (pokeName) {
       // first api call for the pokemon name
@@ -45,10 +39,7 @@ export default function PokeSearch() {
           return response.json();
         })
         .then(function (data) {
-          setSearched(true) // this will display the cards
-          pokeError.textContent = ""
-
-          // console.log(data);
+          console.log(data);
 
           const types = [];
           for (var i = 0; i < data.types.length; i++) {
@@ -56,15 +47,24 @@ export default function PokeSearch() {
           }
           setPokeTypes(types);
           setPokePic(data.sprites.other.home.front_default);
-          setShinyPokePic(data.sprites.other.home.front_shiny);
-        })
-        .catch(function(err){
-          console.log(err)
-          pokeError.textContent = "no Pokemon found"
-        })
+          setShinyPokePic(data.sprites.other.home.front_shiny)
+
+          // const typeURL = `https://pokeapi.co/api/v2/type/${type}/`;
+
+          // second API call for the type
+          // fetch(typeURL)
+          //   .then(function (response2) {
+          //     return response2.json();
+          //   })
+          //   .then(function (data2) {
+          //     console.log(data2);
+          //   });
+        });
     } else {
       console.log("nope no name");
     }
+    // setPokeName("");
+    // setPokeTypes([]);
   };
 
   useEffect(() => {
@@ -86,12 +86,9 @@ export default function PokeSearch() {
             type="text"
             placeholder="Pokemon Name"
           />
-          
           <button type="button" onClick={handleFormSubmit}>
               <FontAwesomeIcon icon={faMagnifyingGlass} />
           </button>
-          <br></br>
-          <span id="poke-name-error"></span>
         </form>
       </div>
 
