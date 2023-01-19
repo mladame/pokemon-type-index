@@ -45,8 +45,8 @@ form {
 /* ----------------POKESEARCH-------------- */
 .search-box {
   margin: 50px auto 40px auto;
-  width: 70%;
-  max-width: 900px;
+  width: 90%;
+  max-width: 750px;
   font-family: var(--bodyFont);
 }
 

@@ -152,7 +152,7 @@ export default function DefensiveCard({ pokeTypes }) {
   }, [pokeTypes]);
 
   return (
-    <div className="pokeCard type-card my-4 col-9 col-sm-8 col-md-8 col-lg-9 col-xl-5">
+    <div className="pokeCard type-card my-4 col-10 col-sm-8 col-md-8 col-lg-5 col-xl-5">
       <h3>Takes 4x Damage from : </h3>
       <ul>
         {takes4x.map((type) => (
