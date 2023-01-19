@@ -59,7 +59,7 @@ export default function PokeSearch() {
         })
         .catch(function(err){
           console.log(err)
-          pokeError.textContent = "no Pokemon found"
+          pokeError.textContent = "No Pokemon Found"
         })
     } else {
       console.log("nope no name");
