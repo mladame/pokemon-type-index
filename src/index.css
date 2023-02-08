@@ -96,7 +96,7 @@ form {
   border-radius: 5px;
   -webkit-box-shadow: 2px 4px 15px 5px #a7a7a7;
   box-shadow: 2px 4px 8px 5px #c2c6ff, 1px 1px 15px 7px rgba(199, 202, 245, 0.76) inset;
-  max-width: 500px !important;
+  max-width: 500px;
 }
 
 .render-pokemon h3 {
@@ -107,7 +107,7 @@ form {
   font-weight: 900;
   font-size: 30px;
   color: whitesmoke;
-  text-shadow: rgb(77, 72, 95) 3px 3px 20px;
+  text-shadow: 2px 2px 3px rgb(214, 214, 214), 3px 3px 15px rgb(77, 72, 95);
 }
 
 .pokeimg-container {
