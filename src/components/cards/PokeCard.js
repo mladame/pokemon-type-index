@@ -19,7 +19,7 @@ export default function PokeCard({ pokeName, pokeTypes, pokePic , shinyPokePic})
   }, [pokePic]);
 
   return (
-    <div className="pokeCard render-pokemon my-4 col-9 col-sm-8 col-md-7 col-lg-4 col-xl-3">
+    <div className="pokeCard render-pokemon my-4 col-10 col-sm-8 col-md-6 col-lg-6 col-xl-3">
       {/* this is for the pokemon card */}
       <h3>{pokeNameShown}</h3>
       <div className="pokeimg-container">
