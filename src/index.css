@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa&family=Livvic:wght@200;400;500;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lexend+Exa&family=Livvic:wght@200;400;500;600;900&display=swap');
 
 :root {
   --bodyFont: 'Livvic', sans-serif;
+  --headerFont: 'Fredoka One', cursive;
 }
 
 body {
   text-align: center !important;
-  background-color: #e4f4ff !important;
-  /* min-width: 100%; */
-  /* height: 100vh; */
+  background-image: url('/src/components/images/joe-woods-4Zaq5xY5M_c-unsplash-edit.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .site-container {
@@ -24,7 +27,6 @@ form {
   display: inline-block;
   width: 100px;
   height: 30px;
-  /* padding: 5px 10px; */
   margin: 5px 10px;
   border-radius: 5px;
   border: 1px solid rgb(151, 151, 151);
@@ -45,26 +47,31 @@ form {
 /* ----------------POKESEARCH-------------- */
 .search-box {
   margin: 50px auto 40px auto;
-  width: 70%;
-  max-width: 900px;
+  width: 90%;
+  max-width: 750px;
   font-family: var(--bodyFont);
+  /* border: 5px solid red; */
+  box-shadow: 1px 1px 8px 3px #b7a2f8c9;
 }
 
 .search-box h1 {
   margin: 0px;
   font-size: 25px;
-  padding: 4px;
+  padding: 10px 4px;
   border: 2px solid #9781d6;
   border-bottom: 0px;
   border-radius: 3px 3px 0 0;
   background-color: rgba(245, 220, 240, 1);
   font-weight: 600;
+  box-shadow: 1px 1px 6px 2px #b09af1b7 inset;
 }
 
 .form {
   border: 2px solid #9781d6;
   padding: 15px;
+  margin: 0;
   background-color: #f5f9fc;
+  box-shadow: 1px 1px 6px 2px #b09af1b7 inset;
 }
 
 .form input {
@@ -95,8 +102,8 @@ form {
   border: 4px solid rgb(232, 234, 255);
   border-radius: 5px;
   -webkit-box-shadow: 2px 4px 15px 5px #a7a7a7;
-  box-shadow: 2px 4px 8px 5px #c2c6ff, 1px 1px 15px 7px rgba(199, 202, 245, 0.76) inset;
-  max-width: 500px !important;
+  box-shadow: 1px 1px 8px 6px #c2c6ffc0, 1px 1px 15px 7px rgba(199, 202, 245, 0.76) inset;
+  max-width: 500px;
 }
 
 .render-pokemon h3 {
@@ -107,7 +114,7 @@ form {
   font-weight: 900;
   font-size: 30px;
   color: whitesmoke;
-  text-shadow: rgb(77, 72, 95) 3px 3px 20px;
+  text-shadow: 2px 2px 3px rgb(214, 214, 214), 3px 3px 15px rgb(77, 72, 95);
 }
 
 .pokeimg-container {
@@ -131,7 +138,7 @@ form {
 
 .render-pokemon ul {
   margin: 40px auto;
-  margin-top: 40px;
+  margin-top: 20px;
   max-width: 275px;
   background-color: rgb(228, 235, 248);
   padding: 15px 10px;
@@ -164,9 +171,10 @@ form {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #e8ebee;
   -webkit-transition: .4s;
   transition: .4s;
+  border-radius: 10px;
 }
 
 .slider:before {
@@ -179,6 +187,8 @@ form {
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
+  border-radius: 7px;
+  box-shadow: 1px 1px 4px #d3d6d8;
 }
 
 input:checked + .slider {
@@ -290,16 +300,12 @@ input:checked + .slider:before {
 /* --- header */
 .header {
   background-color: rgb(213, 196, 248);
-  /* border-bottom: 2px solid rgb(255, 255, 255); */
-  border-bottom: 4px solid rgb(232, 234, 255);
-  padding-bottom: 7px;
-
+  padding: 30px auto;
 }
 
 .display-4 {
   color: #fff;
-  text-shadow: 0 0 7px #736598;
-  /* text-shadow: 3px 3px 20px rgb(77, 72, 95); */
+  font-family: var(--headerFont);
 }
 
 .custom-h1:hover {
@@ -311,11 +317,13 @@ input:checked + .slider:before {
   min-height: 100%;
   padding-bottom: 2.5rem;
   border: 3px solid rgba(255, 0, 0, 0);
-  background-color: #e4f4ff;
+  /* background-color: #e4f4ff;
   opacity: 1;
   background-image: linear-gradient(#ffffff48 2px, transparent 2px),
     linear-gradient(to right, #ffffff48 2px, #e4f4ff 2px);
-  background-size: 70px 70px;
+  background-size: 70px 70px; */
+  /* background-image: url(/src/components/images/joe-woods-4Zaq5xY5M_c-unsplash-edit.jpg) no-repeat center fixed;
+  background-size: cover; */
 }
 
 /* --- pokeCard */
@@ -338,13 +346,13 @@ input:checked + .slider:before {
   width: 350px;
   margin: auto;
   padding: 20px 0;
-  border: 4px solid #ada0d3;
+  border: 3px solid #eae4fc;
   border-radius: 5px;
   /* background-color: #f5f2ffaf; */
   /* background-color: rgba(236, 236, 236, 0.7); */
   background-color: rgb(233, 238, 247);
   /* box-shadow: 1px 1px 20px 7px #ded9eede inset; */
-  box-shadow: 3px 3px 8px 3px rgb(202, 211, 233) inset;
+  box-shadow: 1px 1px 10px 1px #cbbff0 inset, 1px 1px 10px 6px #cbbff0;
 }
 
 .type-card h3 {
@@ -355,7 +363,7 @@ input:checked + .slider:before {
 }
 
 .type-card ul {
-  padding-left: 0px !important;
+  padding-left: 0px;
   background-color: #dfd8fd;
   padding: 15px 0px;
   width: 80%;
