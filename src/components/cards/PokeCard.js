@@ -26,7 +26,7 @@ export default function PokeCard({ pokeName, pokeTypes, pokePic , shinyPokePic})
         <img src={pokePicShown} className="poke-img"></img>
       </div>
       <label className="switch mt-3">
-        <input id="shiny-toggle" type="checkbox" onClick={shinyChecked}/>
+        <input id="shiny-toggle" type="checkbox" onClick={shinyChecked} />
         <span className="slider"></span>
       </label>
       <ul>
